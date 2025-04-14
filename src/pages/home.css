@@ -30,7 +30,7 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;  
-    background-color: #116FEB;  
+    background-color: #000000;  
     font-size: 18px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -41,7 +41,7 @@
 
 .lista-filmes a:hover{
     transform: scale(1.02);
-    background-color: #044497;
+    background-color: #24272c;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
