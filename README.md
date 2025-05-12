@@ -1,7 +1,5 @@
 # Teste aplicação  requisição HTTP Rest API
 Este projeto foi desenvolvido para consumir a API pública solicitada (https://jsonplaceholder.typicode.com/users) e exibir os dados dos usuários de maneira organizada. 
-Desenvolvido com ReactJS
-
 
 # Como rodar o projeto:
 
