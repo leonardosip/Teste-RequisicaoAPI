@@ -38,5 +38,5 @@ Desenvolvido com ReactJS
 - **React**: 
 - **React Router**:
 - **Axios**: 
-- **CSS **: 
+- **CSS**: 
 
