@@ -1,0 +1,56 @@
+.usuario-info {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1f1f1f; /* fundo escuro */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #f1f1f1; /* texto claro */
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+.usuario-info h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.usuario-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #d1d1d1;
+}
+
+.usuario-info a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.usuario-info a:hover {
+  color: #cccccc;
+  text-decoration: underline;
+}
+
+.area-buttons {
+  margin-top: 2rem;
+}
+
+.area-buttons button {
+  padding: 0.6rem 1.2rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  margin-right: 1rem;
+}
+
+.area-buttons button:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}

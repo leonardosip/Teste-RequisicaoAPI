@@ -11,12 +11,11 @@
 }
 
 .lista-usuarios article {
-  background-color: #fff;
+  background-color: #1f1f1f;
   padding: 1.5rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  transition: box-shadow 0.3s ease;
-
+  border: 1px solid #333;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,58 +23,43 @@
 }
 
 .lista-usuarios article:hover {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transform: scale(1.02);
 }
 
 .lista-usuarios strong {
   font-size: 18px;
+  color: #ffffff;
   display: block;
   margin-bottom: 0.5rem;
 }
 
 .lista-usuarios p {
   margin: 0.2rem 0;
-}
-
-.lista-usuarios a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #1e90ff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.lista-usuarios a:hover {
-  text-decoration: underline;
-}
-
-.loading {
-  padding: 2rem;
-  text-align: center;
+  color: #cccccc;
 }
 
 .lista-usuarios a {
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
-  background-color: #521968;
-  color: #fff;
+  background-color: #2c2c2c;
+  color: #ffffff;
   border: none;
   border-radius: 15px;
   font-weight: bold;
   text-decoration: none;
   transition: transform 0.2s ease, background-color 0.2s ease;
   display: inline-block;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-.lista-usuarios a:link,
-.lista-usuarios a:visited,
-.lista-usuarios a:hover,
-.lista-usuarios a:active {
-  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .lista-usuarios a:hover {
-  background-color: #9709bb;
+  background-color: #444;
   transform: scale(1.05);
+}
+
+.loading {
+  padding: 2rem;
+  text-align: center;
+  color: #ffffff;
 }

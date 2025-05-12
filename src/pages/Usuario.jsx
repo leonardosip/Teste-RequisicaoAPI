@@ -1,101 +1,52 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom';
 import api from "../services/api";
-import './filme.css'
-
+import './usuario.css';
 
 function Usuario() {
+  const { id } = useParams();
+  const navigate = useNavigate();
 
-    const { id } = useParams();
-    const navigate = useNavigate();
+  const [usuario, setUsuario] = useState({});
+  const [loading, setLoading] = useState(true);
 
-    const [filme, setFilme] = useState({});
-    const [loading, setLoading] = useState(true);
-
-
-    useEffect(() => {
-        async function loadFilme() {
-            await api.get(`/movie/${id}`, {
-                params: {
-                    api_key: '2127cf387a2f25a8301e5d825a366d03',
-                    language: 'pt-BR',
-                }
-            })
-                .then((response) => {
-                    setFilme(response.data);
-                    setLoading(false);
-                })
-                .catch(() => {
-                    navigate('/' , {replace : true })
-                    return;
-                })
-        }
-
-        loadFilme();
-
-        return () => {
-
-        }
-
-    }, [navigate , id])
-
-
-    function salvarFilme(){
-        const minhaLista = localStorage.getItem("salvos")
-
-        let filmesSalvos =JSON.parse(minhaLista) || [];
-
-        const hasFilme = 
-        filmesSalvos.some((filmesSalvos) =>  
-            filmesSalvos.id === filme.id)
-
-        if(hasFilme){
-            alert('Esse filme ja esta na lista');
-            return;
-        }
-
-        filmesSalvos.push(filme);
-        localStorage.setItem('salvos' , JSON.stringify(filmesSalvos));
-        alert("FILME SALVO COM SUCESSO")
+  useEffect(() => {
+    async function loadUsuario() {
+      try {
+        const response = await api.get(`/users/${id}`);
+        setUsuario(response.data);
+        setLoading(false);
+      } catch (error) {
+        navigate('/', { replace: true });
+      }
     }
 
+    loadUsuario();
+  }, [navigate, id]);
 
-    if (loading) {
-        return (
-            <div className="loading">
-                <h1>Carregando os detalhes...</h1>
-            </div>
-        )
-    }
-
-
+  if (loading) {
     return (
-        <div className="filme-info">
+      <div className="loading">
+        <h1>Carregando os detalhes...</h1>
+      </div>
+    );
+  }
 
-            <h1>{filme.title}</h1>
-            <img src=
-                {`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`}
-                alt={filme.title} />
-            <h3>Sinopse</h3>
-            <span>{filme.overview}</span>
-            <br />
-            <strong> Avaliacao : {filme.vote_average} / 10</strong>
+  return (
+    <div className="usuario-info">
+      <h1>{usuario.name}</h1>
+      <p><strong>Usuário:</strong> {usuario.username}</p>
+      <p><strong>Email:</strong> {usuario.email}</p>
+      <p><strong>Telefone:</strong> {usuario.phone}</p>
+      <p><strong>Website:</strong> <a href={`https://${usuario.website}`} target="_blank" rel="noopener noreferrer">{usuario.website}</a></p>
+      <p><strong>Empresa:</strong> {usuario.company?.name}</p>
+      <p><strong>Endereço:</strong> {usuario.address?.street}, {usuario.address?.city}</p>
 
-            <div className="area-buttons">
-                <button onClick={salvarFilme}> Salvar </button>
-                <button>
-                    <a target="blank" 
-                    rel="external" 
-                    href={`https://youtube.com/results?search_query=${filme.title} Trailer`}>
-                        Trailer
-                    </a>
-                </button>
-            </div>
-
-        </div>
-
-    )
-
+      <div className="area-buttons">
+        <button onClick={() => navigate('/')}>Voltar</button>
+      </div>
+    </div>
+  );
 }
 
 export default Usuario;
