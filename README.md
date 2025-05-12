@@ -24,17 +24,27 @@ Este projeto foi desenvolvido para consumir a API pública solicitada (https://j
 
 
 
+# Organização do Projeto  
 
 
-## Funcionalidades:
-- **Página inicial**: Exibe uma lista com o nome, e-mail e telefone de cada usuário.
-- **Campo de pesquisa**: Permite filtrar usuários pelo nome.
-- **Página de detalhes**: Exibe informações adicionais sobre o usuário, como e-mail, telefone e website.
+### Consumo da API  
+Usei a API do [JSONPlaceholder](https://jsonplaceholder.typicode.com/users), que simula dados de usuários. As chamadas são feitas com `axios`, e usei `useEffect` junto com `useState` pra controlar os dados e o carregamento.
+
+### Campo de Busca  
+Adicionei um campo pra buscar os usuários pelo nome, que filtra **enquanto a pessoa digita**. Usei o `.filter()` e `.toLowerCase()` pra garantir que funciona mesmo se escrever com letra maiúscula ou minúscula.
+
+### Estilização  
+Usei **CSS puro**, sem usar bibliotecas como Tailwind ou Bootstrap. Escolhi uma paleta mais neutra com **preto, branco e cinza**, pra deixar o visual mais limpo e profissional. Também coloquei alguns efeitos, tipo **hover com animação nos botões** e **sombras nas caixas**, pra deixar mais agradável visualmente.
 
 
-## Tecnologias utilizadas:
-- **React**: 
-- **React Router**:
-- **Axios**: 
-- **CSS**: 
+### Tratamento de Erros  
+- Quando a pessoa tenta acessar uma página que não existe, é redirecionada pra uma **página de erro 404**.  
+- O mesmo acontece se acessar um ID de usuário que não existe — vai pra tela de erro também.
+
+### Usabilidade e Visual  
+- Os links e botões estão bem destacados.  
+- Tudo está centralizado e fácil de ler.  
+- Organizei as informações dos usuários em caixas, pra deixar mais claro e visualmente agradável.
+
+
 
