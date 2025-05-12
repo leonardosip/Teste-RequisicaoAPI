@@ -9,7 +9,7 @@ function Erro (){
 
             <div className="centro">
             <h2>Pagina nao encontrada</h2>
-            <Link to="/" className="linq">Veja todos os filmes</Link>
+            <Link to="/" className="linq">Usuario nao encontrado, escolha um usuario da lista </Link>
             </div>           
         </div>
     )

@@ -1,56 +1,81 @@
-.lista-filmes{
-    max-width: 800px;
-    margin: 14px auto;
+.container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.lista-filmes article{
-    width: 100%;
-    background-color: white;
-    padding: 15px;
-    border-radius: 4px;
+.lista-usuarios {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.lista-filmes img{
-    width: 900px;
-    max-width: 100%;
-    display: block;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.lista-usuarios article {
+  background-color: #fff;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: box-shadow 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.lista-filmes strong{
-    margin-bottom: 12px;
-    text-align: center;
-    display: block;
-    font-size: 29px;
+.lista-usuarios article:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-.lista-filmes a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;  
-    background-color: #000000;  
-    font-size: 18px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    height: 50px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    color: azure;
+.lista-usuarios strong {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
-.lista-filmes a:hover{
-    transform: scale(1.02);
-    background-color: #24272c;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.lista-usuarios p {
+  margin: 0.2rem 0;
 }
 
-.loading{
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.lista-usuarios a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.lista-usuarios a:hover {
+  text-decoration: underline;
+}
+
+.loading {
+  padding: 2rem;
+  text-align: center;
+}
+
+.lista-usuarios a {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #521968;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.lista-usuarios a:link,
+.lista-usuarios a:visited,
+.lista-usuarios a:hover,
+.lista-usuarios a:active {
+  text-decoration: none;
+}
+
+.lista-usuarios a:hover {
+  background-color: #9709bb;
+  transform: scale(1.05);
 }

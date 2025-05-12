@@ -1,64 +1,49 @@
 import { useEffect, useState } from "react";
-import api from './../services/api'
-import {Link} from 'react-router-dom';
-import './home.css'
-
-
-//https://api.themoviedb.org/3/movie/popular?api_key=2127cf387a2f25a8301e5d825a366d03&language=pt-BR&page=1
+import api from './../services/api';
+import { Link } from 'react-router-dom';
+import './home.css';
 
 function Home() {
+  const [usuarios, setUsuarios] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    const [filmes, setFilmes] = useState([]);
-    const [loading, setLoading] = useState(true) ;
-
-    useEffect(() => {
-        async function loadFilms() {
-            const response = await api.get('/movie/popular', {
-                params: {
-                    api_key: '2127cf387a2f25a8301e5d825a366d03',
-                    language: 'pt-BR',
-                    page: 1
-                }
-            }
-            )
-            // console.log(response.data.results.slice(0,15));
-            setFilmes(response.data.results.slice(0, 20));
-            setLoading(false);
-        }
-        loadFilms();
-    })
-
-
-
-
-
-    if(loading){
-        return(
-            <div className="loading">
-                <h2>Carregando Filmes..</h2>
-            </div>
-        )
+  useEffect(() => {
+    async function loadUsers() {
+      try {
+        const response = await api.get('/users');
+        setUsuarios(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Erro ao buscar usuários:", error);
+        setLoading(false);
+      }
     }
 
+    loadUsers();
+  }, []); 
+
+  if (loading) {
     return (
-        <div className="container">
-            <div className="lista-filmes">
-                {filmes.map((filme) => {
-                    return (
-                        <article key={filme.id}>
-                            <strong>{filme.title}</strong>
-                            <img src=
-                            {`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`}
-                            alt={filme.title}/>
-                            <Link to={`/filme/${filme.id}`}> Acessar </Link>
-                        </article>
-                    )
-                })}
-            </div>
-        </div>
+      <div className="loading">
+        <h2>Carregando usuários...</h2>
+      </div>
+    );
+  }
 
-    )
-
+  return (
+    <div className="container">
+      <div className="lista-usuarios">
+        {usuarios.map((usuario) => (
+          <article key={usuario.id}>
+            <strong>{usuario.name}</strong>
+            <p>Email: {usuario.email}</p>
+            <p>Telefone: {usuario.phone}</p>
+            <Link to={`/usuario/${usuario.id}`} className="link">Exibir mais detalhes</Link>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Home;
