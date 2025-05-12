@@ -63,3 +63,25 @@
   text-align: center;
   color: #ffffff;
 }
+
+.search-bar {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.search-bar input {
+    padding: 0.5rem;
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #1c1c1c; 
+    color: #fff; 
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #fff; 
+    outline: none;
+}
