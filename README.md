@@ -20,7 +20,7 @@ Este projeto foi desenvolvido para consumir a API pública solicitada (https://j
    npm run dev
 
 6. **Acesse a aplicação**:
-   A aplicação estará disponível no navegador em [http://localhost:3000](http://localhost:3000).
+   A aplicação estará disponível no navegador.
 
 
 
