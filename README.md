@@ -4,7 +4,7 @@ Este projeto foi desenvolvido para consumir a API pública solicitada (https://j
 # Como rodar o projeto:
 
 1. **Clone o repositório**:
-   Abra o terminal e rode o seguinte comando:
+   Abra o terminal e rode o seguinte comando: (seria melhor uma pasta para clonar)
    git clone https://github.com/leonardosip/Teste-RequisicaoAPI.git
 
 
@@ -20,7 +20,7 @@ Este projeto foi desenvolvido para consumir a API pública solicitada (https://j
    npm run dev
 
 6. **Acesse a aplicação**:
-   A aplicação estará disponível no navegador.
+   A aplicação estará disponível no navegador ao acessar o link dado no terminal.
 
 
 
@@ -34,7 +34,7 @@ Usei a API do [JSONPlaceholder](https://jsonplaceholder.typicode.com/users), que
 Adicionei um campo pra buscar os usuários pelo nome, que filtra **enquanto a pessoa digita**. Usei o `.filter()` e `.toLowerCase()` pra garantir que funciona mesmo se escrever com letra maiúscula ou minúscula.
 
 ### Estilização  
-Usei **CSS puro** . Escolhi uma paleta mais neutra com **preto, branco e cinza**, pra deixar o visual mais limpo e profissional. Também coloquei alguns efeitos, pra deixar mais agradável visualmente.
+Usei CSS puro . Escolhi uma paleta mais neutra com preto, branco e cinza, pra deixar o visual mais limpo e profissional.
 
 
 ### Tratamento de Erros  
