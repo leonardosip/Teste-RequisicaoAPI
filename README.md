@@ -27,14 +27,14 @@ Este projeto foi desenvolvido para consumir a API pública solicitada (https://j
 ### Consumo da API  
 Usei a API do [JSONPlaceholder](https://jsonplaceholder.typicode.com/users), que simula dados de usuários. As chamadas são feitas com `axios`, e usei `useEffect` junto com `useState` pra controlar os dados e o carregamento.
 
-### Campo de Busca  
+### Busca  
 Adicionei um campo pra buscar os usuários pelo nome, que filtra **enquanto a pessoa digita**. Usei o `.filter()` e `.toLowerCase()` pra garantir que funciona mesmo se escrever com letra maiúscula ou minúscula.
 
 ### Estilização  
 Usei CSS puro . Escolhi cores mais neutras com preto, branco e cinza.
 
 
-### Tratamento de Erros  
+### Erros  
 - Quando a pessoa tenta acessar uma página que não existe, é redirecionada pra uma **página de erro 404**.  
 - O mesmo acontece se acessar um ID de usuário que não existe — vai pra tela de erro também.
 
