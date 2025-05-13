@@ -4,9 +4,7 @@ Este projeto foi desenvolvido para consumir a API pública solicitada (https://j
 # Como rodar o projeto:
 
 1. **Clone o repositório**:
-   Abra o terminal e rode o seguinte comando: (seria melhor uma pasta para clonar)
-   git clone https://github.com/leonardosip/Teste-RequisicaoAPI.git
-
+   Abra o terminal e rode o seguinte comando:  git clone https://github.com/leonardosip/Teste-RequisicaoAPI.git 
 
 2. **Navegue até a pasta do projeto**:
    cd Teste-RequisicaoAPI
@@ -16,7 +14,6 @@ Este projeto foi desenvolvido para consumir a API pública solicitada (https://j
 
 4. **Inicie o servidor de desenvolvimento**:
    Após instalar as dependências, inicie o servidor com o comando:
-   
    npm run dev
 
 6. **Acesse a aplicação**:
