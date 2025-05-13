@@ -31,7 +31,7 @@ Usei a API do [JSONPlaceholder](https://jsonplaceholder.typicode.com/users), que
 Adicionei um campo pra buscar os usuários pelo nome, que filtra **enquanto a pessoa digita**. Usei o `.filter()` e `.toLowerCase()` pra garantir que funciona mesmo se escrever com letra maiúscula ou minúscula.
 
 ### Estilização  
-Usei CSS puro . Escolhi uma paleta mais neutra com preto, branco e cinza, pra deixar o visual mais limpo e profissional.
+Usei CSS puro . Escolhi cores mais neutras com preto, branco e cinza.
 
 
 ### Tratamento de Erros  
